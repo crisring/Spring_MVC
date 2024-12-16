@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="properties/database.properties" />
+
+	<typeAliases>
+		<typeAlias type="kr.co.sist.dao.mapper.EmpDomain"
+			alias="empDomain"></typeAlias>
+		<typeAlias type="kr.co.sist.member.EmpDomain1"
+			alias="empDomain1"></typeAlias>
+
+
+		<!-- 게시판에 검색을하기 위한 값을 저장하는 VO -->
+		<typeAlias type="kr.co.sist.user.board.SearchVO"
+			alias="searchVO" />
+		<typeAlias type="kr.co.sist.user.board.MBoardVO"
+			alias="mBoardVO" />
+		<!-- 게시판에 검색 결과를 저장하기위한 Domain -->
+		<typeAlias type="kr.co.sist.user.board.MBoardDomain"
+			alias="mBoardDomain" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${connectionURL}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="kr/co/sist/dao/mapper/testMapper.xml" />
+		<mapper resource="kr/co/sist/user/board/boardMapper.xml" />
+
+		<mapper resource="kr/co/sist/member/testMapper1.xml" />
+
+
+	</mappers>
+</configuration>
