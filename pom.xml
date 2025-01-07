@@ -10,7 +10,8 @@
 	</parent>
 	<groupId>kr.so.sist</groupId>
 	<artifactId>mvc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<!--<version>0.0.1-SNAPSHOT</version>-->
+	<version>1.1</version>
 	<packaging>war</packaging>
 	<name>mvc</name>
 	<description>Spring 처음입니다.</description>
@@ -133,7 +134,12 @@
     <artifactId>spring-security-crypto</artifactId>
     <version>6.3.3</version>
 </dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version>
+</dependency>
 		
 		
 	</dependencies>

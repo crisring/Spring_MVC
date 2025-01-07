@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" info="FileUploadController에서 제공하는 jsp"%>
+	pageEncoding="UTF-8" info=""%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -32,38 +32,17 @@
 <script type="text/javascript">
 	$(function() {
 
-		$("#btn").click(function() {
-
-			// 유효성 검증
-			if ($("#upfile").val() == "") {
-
-				alert("파일은 필수 선택!")
-				return;
-			}
-			$("#btnSubmit").submit();
-		})
-
 	}); // document.ready
 </script>
 </head>
 <body>
 	<div id="wrap">
-
-		<h2>파일 업로드</h2>
-		<form action="/day1206/uploadProcess" method="post"
-			enctype="multipart/form-data" id="uploadFrm">
-
-			<label>업로더</label> <input type="text" name="uploader" id="uploader"
-				value="테스트" /><br> <label>사용대상</label>
-			<c:forEach var="age" begin="10" end="80" step="10">
-				<input type="checkbox" name="targetAge" id="${age }" />
-				<c:out value="${age }" />대
-	</c:forEach>
-			<br> <label>파일</label> <input type="file" name="upfile"
-				id="upfile" /> <input type="button" value="업로드" id="btn"
-				class="btn btn-sm btn-primary" />
-
-		</form>
+		<ul>
+			<c:forEach var="email" items="${revList }" varStatus="i">
+				<li><a href="/day1219/mailSender?email=${email }"><c:out
+							value="${email }" /></a></li>
+			</c:forEach>
+		</ul>
 	</div>
 </body>
 </html>

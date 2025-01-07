@@ -64,7 +64,7 @@
 </head>
 <body>
 	<div id="wrap">
-		<h2>작업</h2>
+		<h2>작업 KJH</h2>
 
 		<ul>
 			<li><a href="/request_get">GET요청</a></li>
@@ -117,7 +117,12 @@
 				<div id="output"></div></li>
 
 			<li><a href="/board/board_list">게시판</a></li>
+
 			<li><a href="/day1212/crypto">암호화</a></li>
+
+			<li><a href="/day1219/email">메일전송</a></li>
+
+			<li><a href="/day1220/restful">RESTful</a></li>
 		</ul>
 
 		<ul>
